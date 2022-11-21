@@ -23,7 +23,7 @@ exports.getAllTranscriptions = async(req,res)=>{
         const transcriptions = await Transcription.find().select("metaData callDetails tags").lean()
         res.status(200).json({
             success: true,
-            transcriptions
+            transcriptions            
         })
     }
     catch(err){
